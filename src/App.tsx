@@ -25,7 +25,7 @@ function App() {
   }
 
   return (
-    <div className="flex flex-col h-screen bg-purple-100">
+    <div className="flex flex-col h-screen w-full">
       <header className="bg-purple-600 text-white p-4 text-center">
         <h1 className="text-2xl font-bold">Social Sim</h1>
       </header>
@@ -38,7 +38,7 @@ function App() {
             <li onClick={() => setCurrentPage('profile')}><User size={24} className="cursor-pointer hover:text-purple-300" /></li>
           </ul>
         </nav>
-        <div className="flex-grow p-4">
+        <div className="flex-grow p-4 overflow-auto bg-purple-100">
           {renderPage()}
         </div>
       </main>

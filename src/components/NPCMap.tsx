@@ -1,9 +1,9 @@
 import { Map } from 'lucide-react'
 
 const NPCMap = () => (
-  <div className="bg-white shadow-md rounded-lg p-6 max-w-4xl mx-auto">
+  <div className="bg-white shadow-md rounded-lg p-6 w-full h-full">
     <h2 className="text-2xl font-bold mb-4 text-purple-800">Virtual World Map</h2>
-    <div className="relative w-full h-96 bg-purple-100 rounded-lg overflow-hidden">
+    <div className="relative w-full h-[calc(100%-6rem)] bg-purple-100 rounded-lg overflow-hidden">
       <div className="absolute top-4 left-4 bg-white p-2 rounded shadow">
         <Map className="text-purple-500" />
       </div>

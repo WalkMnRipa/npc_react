@@ -1,8 +1,8 @@
 const HomePage = () => (
-  <div className="text-center">
+  <div className="text-center h-full flex flex-col justify-center">
     <h2 className="text-2xl font-bold mb-4 text-purple-800">Welcome to Social Sim!</h2>
     <p className="mb-4 text-purple-600">Create your NPC, explore the world, and make new friends!</p>
-    <div className="grid grid-cols-2 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
       <div className="bg-white p-4 rounded-lg shadow-md">
         <h3 className="font-bold mb-2 text-purple-700">Create Your NPC</h3>
         <p className="text-purple-600 mb-2">Start by creating your AI-powered NPC</p>
