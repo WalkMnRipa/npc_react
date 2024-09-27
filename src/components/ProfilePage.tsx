@@ -1,5 +1,3 @@
-import React from 'react'
-
 const ProfilePage = () => (
   <div className="bg-white shadow-md rounded-lg p-6 max-w-2xl mx-auto">
     <div className="flex items-center mb-6">

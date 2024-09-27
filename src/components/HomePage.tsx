@@ -1,5 +1,3 @@
-import React from 'react'
-
 const HomePage = () => (
   <div className="text-center">
     <h2 className="text-2xl font-bold mb-4 text-purple-800">Welcome to Social Sim!</h2>
