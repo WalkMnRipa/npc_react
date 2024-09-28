@@ -7,3 +7,8 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* Add these styles to ensure the login page takes full height */
+.login-page-base {
+  min-height: 100vh;
+}

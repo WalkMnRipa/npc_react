@@ -9,5 +9,24 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.4/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.4/firebase-analytics.js";
+  import { getAuth } from "https://www.gstatic.com/firebasejs/9.22.4/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDGHhxt6tdJcyHOeOlarvfp8NnwVRP_gJk",
+    authDomain: "npcfriends-ce939.firebaseapp.com",
+    projectId: "npcfriends-ce939",
+    storageBucket: "npcfriends-ce939.appspot.com",
+    messagingSenderId: "1067351972835",
+    appId: "1:1067351972835:web:83375da5c3c6025b8eded6",
+    measurementId: "G-HLNVPW3BG3"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const auth = getAuth(app);
+</script>
   </body>
 </html>
