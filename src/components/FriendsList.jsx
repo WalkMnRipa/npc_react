@@ -1,11 +1,12 @@
-import { MessageCircle } from 'lucide-react'
+import React from 'react';
+import { MessageCircle } from 'lucide-react';
 
 const FriendsList = () => {
   const friends = [
     { id: 1, name: 'Alice Johnson', status: 'online' },
     { id: 2, name: 'Bob Smith', status: 'offline' },
     { id: 3, name: 'Charlie Brown', status: 'online' },
-  ]
+  ];
 
   return (
     <div className="bg-white shadow-md rounded-lg p-6 max-w-md mx-auto">
@@ -27,7 +28,7 @@ const FriendsList = () => {
         ))}
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default FriendsList
+export default FriendsList;

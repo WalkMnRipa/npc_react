@@ -1,3 +1,5 @@
+import React from 'react';
+
 const HomePage = () => (
   <div className="text-center h-full flex flex-col justify-center">
     <h2 className="text-2xl font-bold mb-4 text-purple-800">Welcome to Social Sim!</h2>
@@ -15,6 +17,6 @@ const HomePage = () => (
       </div>
     </div>
   </div>
-)
+);
 
-export default HomePage
+export default HomePage;

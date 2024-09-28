@@ -1,16 +1,12 @@
 import React, { useState } from 'react';
 import { Lock } from 'lucide-react';
 
-interface LoginProps {
-  onLogin: (user: { email: string }) => void;
-}
-
-const LoginPage: React.FC<LoginProps> = ({ onLogin }) => {
+const LoginPage = ({ onLogin }) => {
   const [identifier, setIdentifier] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = (e) => {
     e.preventDefault();
     if (
       (identifier === 'joey' && password === 'jowander') ||
@@ -27,34 +23,30 @@ const LoginPage: React.FC<LoginProps> = ({ onLogin }) => {
       <div className="login-page-base-wrapper">
         <header>
           <Lock size={24} />
-          <h2>Login</h2>
+          <h2>Login to NPCfriends</h2>
         </header>
         <form onSubmit={handleLogin}>
           {error && <p className="error-message">{error}</p>}
-          <label>
-            <input
-              type="text"
-              value={identifier}
-              onChange={(e) => setIdentifier(e.target.value)}
-              placeholder="Username or Email"
-              required
-            />
-          </label>
-          <label>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="Password"
-              required
-            />
-          </label>
-          <section>
-            <button type="submit">Log In</button>
-          </section>
+          <input
+            type="text"
+            placeholder="Username or Email"
+            value={identifier}
+            onChange={(e) => setIdentifier(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">Login</button>
         </form>
       </div>
-      <footer className="login-footer">© 2024 NPCfriends. All rights reserved.</footer>
+      <footer className="login-footer">
+        &copy; 2024 NPCfriends. All rights reserved.
+      </footer>
     </div>
   );
 };

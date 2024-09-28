@@ -1,12 +1,11 @@
 import React from 'react'
-import { Users, Map, User, Home, LogOut } from 'lucide-react'
-import './App.css'
 import { AuthProvider, useAuth } from './AuthProvider'
 import LoginPage from './components/LoginPage'
 import HomePage from './components/HomePage'
 import FriendsList from './components/FriendsList'
 import NPCMap from './components/NPCMap'
 import ProfilePage from './components/ProfilePage'
+import { Users, Map, User, Home, LogOut } from 'lucide-react'
 
 function AppContent() {
   const [currentPage, setCurrentPage] = React.useState('home')
@@ -32,7 +31,7 @@ function AppContent() {
   }
 
   return (
-    <div className="flex flex-col h-screen w-full bg-gray-100">
+    <div className="app-container flex flex-col h-screen w-full bg-gray-100">
       <header className="bg-blue-600 text-white p-4 text-center rounded-b-3xl shadow-lg relative">
         <h1 className="text-3xl font-bold" style={{ fontFamily: 'SF Pro Display, sans-serif' }}>NPCfriends</h1>
         <button 
@@ -63,7 +62,7 @@ function AppContent() {
   )
 }
 
-const App: React.FC = () => {
+function App() {
   return (
     <AuthProvider>
       <AppContent />

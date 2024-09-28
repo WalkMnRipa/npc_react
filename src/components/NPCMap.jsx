@@ -1,29 +1,10 @@
 import React, { useState } from 'react';
 import { Map, Coffee, Trees, Building, Users, X, Book, ShoppingBag, Utensils, Dumbbell } from 'lucide-react';
 
-interface Zone {
-  id: number;
-  name: string;
-  icon: React.ElementType;
-  color: string;
-  top: string;
-  left: string;
-}
+const NPCMap = () => {
+  const [selectedNPC, setSelectedNPC] = useState(null);
 
-interface NPC {
-  id: number;
-  name: string;
-  location: string;
-  color: string;
-  top: string;
-  left: string;
-  bio: string;
-}
-
-const NPCMap: React.FC = () => {
-  const [selectedNPC, setSelectedNPC] = useState<NPC | null>(null);
-
-  const zones: Zone[] = [
+  const zones = [
     { id: 1, name: 'Coffee Shop', icon: Coffee, color: 'bg-amber-200', top: '20%', left: '40%' },
     { id: 2, name: 'Park', icon: Trees, color: 'bg-emerald-200', top: '40%', left: '20%' },
     { id: 3, name: 'Office Building', icon: Building, color: 'bg-sky-200', top: '60%', left: '70%' },
@@ -34,7 +15,7 @@ const NPCMap: React.FC = () => {
     { id: 8, name: 'Gym', icon: Dumbbell, color: 'bg-orange-200', top: '80%', left: '50%' },
   ];
 
-  const npcs: NPC[] = [
+  const npcs = [
     { id: 1, name: 'Alice', location: 'Coffee Shop', color: 'bg-blue-400', top: '23%', left: '43%', bio: 'Coffee enthusiast and aspiring writer.' },
     { id: 2, name: 'Bob', location: 'Coffee Shop', color: 'bg-green-400', top: '25%', left: '45%', bio: 'Software developer who works remotely from cafes.' },
     { id: 3, name: 'Charlie', location: 'Office Building', color: 'bg-yellow-400', top: '65%', left: '75%', bio: 'Workaholic software developer.' },
@@ -47,7 +28,7 @@ const NPCMap: React.FC = () => {
     { id: 10, name: 'Julia', location: 'Gym', color: 'bg-rose-400', top: '83%', left: '53%', bio: 'Olympic weightlifter in training.' },
   ];
 
-  const handleNPCClick = (npc: NPC) => {
+  const handleNPCClick = (npc) => {
     setSelectedNPC(npc);
   };
 
